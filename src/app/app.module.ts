@@ -5,7 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 // ngrx
 import { StoreModule } from '@ngrx/store';
-import { StoreDevtoolsModule } from '@ngrx/store-devtools'
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { AppReducers } from './app.reducers';
 
 import { AppComponent } from './app.component';
@@ -17,6 +17,9 @@ import { FooterComponent } from './footer/footer.component';
 import { TodoHeaderComponent } from './todo/todo-header/todo-header.component';
 import { environment } from '../environments/environment';
 
+// Pipes
+import { FilterPipe } from './filter/filter.pipe';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +28,8 @@ import { environment } from '../environments/environment';
     TodoItemComponent,
     TodoFooterComponent,
     FooterComponent,
-    TodoHeaderComponent
+    TodoHeaderComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,

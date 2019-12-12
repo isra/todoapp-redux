@@ -43,6 +43,8 @@ export const todoReducer = (
              });
            case fromTodoActions.DELETE_TASK:
              return state.filter((todoItem: Todo) => todoItem.id !== action.idTask);
+           case fromTodoActions.DELETE_ALL_COMPLETED:
+             return state.filter((todoItem: Todo) => !todoItem.completed);
            case fromTodoActions.TOGGLE_ALL:
              return state.map((todoItem: Todo) => {
                return {
