@@ -5,10 +5,10 @@ import { Todo } from './model/todo.model';
 
 const todoState: Todo[] = [];
 
-export const todoReducer = (
+export function todoReducer(
          state = todoState,
          action: fromTodoActions.ActionsTodo
-       ): Todo[] => {
+       ): Todo[] {
          switch (action.type) {
            case fromTodoActions.ADD:
              const todo = new Todo(action.payload);
@@ -55,4 +55,4 @@ export const todoReducer = (
            default:
              return state;
          }
-       };
+       }
